@@ -6,7 +6,7 @@ const app = express();
 import mongoose from 'mongoose';
 import DeviceData from './models/deviceData';
 const httpServer = createServer(app);
-const PORT = 2000|| process.env.port;
+const PORT = 2000 || process.env.PORT;
 const options = { 
   origin:"*",
   cors:true,
