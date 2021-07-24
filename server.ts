@@ -6,7 +6,7 @@ const app = express();
 import mongoose from 'mongoose';
 import DeviceData from './models/deviceData';
 const httpServer = createServer(app);
-const PORT = 2000 || process.env.PORT;
+// const PORT = 2000 || process.env.PORT;
 const options = { 
   origin:"*",
   cors:true,
@@ -79,7 +79,7 @@ app.get('/getdata',async (req,res)=>{
 })
 
 
-httpServer.listen(PORT,()=>{
+httpServer.listen(process.env.PORT,()=>{
   console.log(`Server is up !!`)
 }
 )
